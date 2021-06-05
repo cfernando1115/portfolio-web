@@ -1,0 +1,36 @@
+:root{
+    --gold: #FBE8A6;
+    --bright: #F4976C;
+    --blue: #303C6C;
+    --pale-blue: #B4DFE5;
+    --aqua: #D2FDFF;
+}
+
+*{
+    font-family: 'Manrope', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fbe8a64b;
+}
+
+header {
+    width: 100%;
+    background-color: var(--blue);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0 8px 2px -2px var(--pale-blue);
+}
+
+nav {
+    margin-left: 30px;
+}
+
+nav h2 {
+    color: white;
+    font-weight: 300;
+}
