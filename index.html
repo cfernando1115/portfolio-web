@@ -13,13 +13,151 @@
     <title>Carmen Fernando</title>
   </head>
   <body>
-    <header class="header">
-      <nav class="header__nav">
-        <h2>Carmen Fernando</h2>
+    <div class="container">
+      <nav>
+        <ul class="nav__links-list">
+          <li><a>About</a></li>
+          <li><a>Resume</a></li>
+          <li><a>Contact</a></li>
+        </ul>
       </nav>
-    </header>
-    <main class="main">
-
-    </main>
+      <header class="header">
+        <div class="header__text">
+          <h1><span class="line-deco">Welco</span>me.</h1>
+          <p>Use the links below or keep scrolling to view my projects</p>
+        </div>
+      </header>
+      <main class="main">
+        <div class="links-container">
+          <div class="links-container__link">
+            <h3><span class="line-deco">HTML,</span> JS, CSS</h3>
+            <p class="links-container__desc hidden">
+              These projects use minimal if any frameworks, with a focus on functionality
+              <br/>
+              <a href="#section-front">...view</a>
+            </p>
+          </div>
+          <div class="links-container__link">
+            <h3><span class="line-deco">C#, T</span>esting</h3>
+            <p class="links-container__desc hidden">
+              Sample C# code and unit tests
+              <br/>
+              <a href="#section-back">...view</a>
+            </p>
+          </div>
+          <div class="links-container__link">
+            <h3><span class="line-deco">Frame</span>works</h3>
+            <p class="links-container__desc hidden">
+              Larger ongoing projects using a variety of frameworks including .NET5, MVC, Angular
+              <br/>
+              <a href="#section-frame">...view</a>
+            </p>
+          </div>
+        </div>
+        <div class="container__front">
+          <div class="link-section__title front">
+            <h2><span class="line-deco">HTML,</span> JS, CSS</h2>
+          </div>
+          <div class="link-section--front" id="section-front">
+            <div class="project-container">
+              <div class="project-container__desc" width="300" height="300">
+                <h1>Crumb</h1>
+                <h5><i>Personal project-Desktop</i></h5>
+                <p class="project-desc">Users can search for recipes by ingredient and browse paginated results, adjust serving sizes,
+                   bookmark recipes, and upload their own recipes
+                </p>
+                <hr />
+                <p class="project-info">
+                  <b>Architecture:</b> Jamstack, MVC <br />
+                  <b>Bundler:</b> Parcel <br />
+                  <b>Polyfill:</b> Babel <br />
+                </p>
+                <p class="project-links link--front">
+                  <a href="https://crumb-app.netlify.app/">...View build</a> 
+                  <a href="https://github.com/cfernando1115/crumb">...View source</a>
+                </p>
+              </div>
+              <div class="img-container"> <img src="src/img/crumb-home-300.svg" height="300" width="300" alt="crumb app home" class="project-container__image" /></div>
+              <div class="img-container"><img src="src/img/crumb-pizza-300.svg" height="300" width="300" alt="crumb app search" class="project-container__image" /></div>
+              <div class="img-container"><img src="src/img/crumb-modal-300.svg" height="300" width="300" alt="crumb app modal" class="project-container__image" /></div>
+            </div>
+            <div class="project-container">
+              <div class="project-container__desc">
+                <h1>Sales Table</h1>
+                <h5><i>Personal project-Responsive</i></h5>
+                <p class="project-desc">Users can sort sales data by quarter(s), salesperson name, sales amount, as well as edit data to session storage
+                </p>
+                <hr />
+                <p class="project-info">
+                  <b>Architecture:</b> API Mockup, MVC <br />
+                  <b>Bundler:</b> Parcel <br />
+                  <b>Polyfill:</b> Babel <br />
+                </p>
+                <p class="project-links link--front">
+                  <a href="https://sales-table.netlify.app/">...View build</a> 
+                  <a href="https://github.com/cfernando1115/sales-table">...View source</a>
+                </p>
+              </div>
+              <div class="img-container"><img src="src/img/salestable-home-300.svg" height="300" width="300" alt="sales table home" class="project-container__image" /></div>
+              <div class="img-container"><img src="src/img/salestable-edit-300.svg" height="300" width="300" alt="sales table edit" class="project-container__image" /></div>
+              <div class="img-container"><img src="src/img/salestable-mobile-300.svg" height="300" width="300" alt="sales table mobile" class="project-container__image" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="container__back">
+          <div class="link-section__title back">
+            <h2><span class="line-deco">C#, Un</span>it Testing</h2>
+          </div>
+          <!--<div class="link-section--back" id="section-back">
+            <div class="project-container">
+              <div class="project-container__desc">
+                <h1>Crumb</h1>
+                <h5><i>Personal project-Desktop</i></h5>
+                <p class="project-desc">Users can search for recipes by ingredient and browse paginated results, adjust serving sizes,
+                   bookmark recipes, and upload their own recipes
+                </p>
+                <hr />
+                <p class="project-info">
+                  <b>Architecture:</b> Jamstack, MVC <br />
+                  <b>Bundler:</b> Parcel <br />
+                  <b>Polyfill:</b> Babel <br />
+                </p>
+                <p class="project-links link--back">
+                  <a href="https://crumb-app.netlify.app/">...View build</a> 
+                  <a href="https://github.com/cfernando1115/crumb">...View source</a>
+                </p>
+              </div>
+              <div class="img-container"> <img src="src/img/crumb-home-300.svg" class="project-container__image" /></div>
+              <div class="img-container"><img src="src/img/crumb-pizza-300.svg" class="project-container__image" /></div>
+              <div class="img-container"><img src="src/img/crumb-modal-300.svg" class="project-container__image" /></div>
+            </div>
+            <div class="project-container">
+              <div class="project-container__desc">
+                <h1>Sales Table</h1>
+                <h5><i>Personal project-Responsive</i></h5>
+                <p class="project-desc">Users can sort sales data by quarter(s), salesperson name, sales amount, as well as edit data to session storage
+                </p>
+                <hr />
+                <p class="project-info">
+                  <b>Architecture:</b> API Mockup, MVC <br />
+                  <b>Bundler:</b> Parcel <br />
+                  <b>Polyfill:</b> Babel <br />
+                </p>
+                <p class="project-links link--back">
+                  <a href="https://sales-table.netlify.app/">...View build</a> 
+                  <a href="https://github.com/cfernando1115/sales-table">...View source</a>
+                </p>
+              </div>
+              <div class="img-container"><img src="src/img/salestable-home-300.svg" class="project-container__image" /></div>
+              <div class="img-container"><img src="src/img/salestable-edit-300.svg" class="project-container__image" /></div>
+              <div class="img-container"><img src="src/img/salestable-mobile-300.svg" class="project-container__image" /></div>
+            </div>
+          </div>-->
+        </div>
+      </div>
+    </div>
+        <div class="link-section" id="section-frame">Frameworks</div>
+      </main>
+    </div>
   </body>
 </html>
