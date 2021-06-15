@@ -8,12 +8,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="src/css/main.css" />
-    <script defer type="module" src="src/js/controller.js"></script>
+    <script type="module" src="src/js/controller.js"></script>
 
     <title>Carmen Fernando</title>
   </head>
   <body>
     <div class="container">
+      <!--top navigation-->
       <nav>
         <ul class="nav__links-list">
           <li><a>About</a></li>
@@ -30,7 +31,7 @@
       <main class="main">
         <div class="links-container">
           <div class="links-container__link">
-            <h3><span class="line-deco">HTML,</span> JS, CSS</h3>
+            <h3 class="links-container__link--title"><span class="line-deco">HTML,</span> JS, CSS</h3>
             <p class="links-container__desc hidden">
               These projects use minimal if any frameworks, with a focus on functionality
               <br/>
@@ -38,7 +39,7 @@
             </p>
           </div>
           <div class="links-container__link">
-            <h3><span class="line-deco">C#, T</span>esting</h3>
+            <h3 class="links-container__link--title"><span class="line-deco">C#, T</span>esting</h3>
             <p class="links-container__desc hidden">
               Sample C# code and unit tests
               <br/>
@@ -46,7 +47,7 @@
             </p>
           </div>
           <div class="links-container__link">
-            <h3><span class="line-deco">Frame</span>works</h3>
+            <h3 class="links-container__link--title"><span class="line-deco">Frame</span>works</h3>
             <p class="links-container__desc hidden">
               Larger ongoing projects using a variety of frameworks including .NET5, MVC, Angular
               <br/>
@@ -54,14 +55,15 @@
             </p>
           </div>
         </div>
-        <div class="container__front">
-          <div class="link-section__title front">
+        <!--front-end-->
+        <div class="section-container section-container--front">
+          <div class="link-section__title full-width front">
             <h2><span class="line-deco">HTML,</span> JS, CSS</h2>
           </div>
           <div class="link-section--front" id="section-front">
             <div class="project-container">
-              <div class="project-container__desc" width="300" height="300">
-                <h1>Crumb</h1>
+              <div class="project-container__desc project-container__desc--front">
+                <h1>Sample code</h1>
                 <h5><i>Personal project-Desktop</i></h5>
                 <p class="project-desc">Users can search for recipes by ingredient and browse paginated results, adjust serving sizes,
                    bookmark recipes, and upload their own recipes
@@ -72,7 +74,7 @@
                   <b>Bundler:</b> Parcel <br />
                   <b>Polyfill:</b> Babel <br />
                 </p>
-                <p class="project-links link--front">
+                <p class="project-links front">
                   <a href="https://crumb-app.netlify.app/">...View build</a> 
                   <a href="https://github.com/cfernando1115/crumb">...View source</a>
                 </p>
@@ -82,7 +84,7 @@
               <div class="img-container"><img src="src/img/crumb-modal-300.svg" height="300" width="300" alt="crumb app modal" class="project-container__image" /></div>
             </div>
             <div class="project-container">
-              <div class="project-container__desc">
+              <div class="project-container__desc project-container__desc--front">
                 <h1>Sales Table</h1>
                 <h5><i>Personal project-Responsive</i></h5>
                 <p class="project-desc">Users can sort sales data by quarter(s), salesperson name, sales amount, as well as edit data to session storage
@@ -93,7 +95,7 @@
                   <b>Bundler:</b> Parcel <br />
                   <b>Polyfill:</b> Babel <br />
                 </p>
-                <p class="project-links link--front">
+                <p class="project-links front">
                   <a href="https://sales-table.netlify.app/">...View build</a> 
                   <a href="https://github.com/cfernando1115/sales-table">...View source</a>
                 </p>
@@ -104,59 +106,34 @@
             </div>
           </div>
         </div>
-        <div class="container__back">
-          <div class="link-section__title back">
+        <!--back-end-->
+        <div class="section-container section-container--back">
+          <div class="link-section__title full-width back">
             <h2><span class="line-deco">C#, Un</span>it Testing</h2>
           </div>
-          <!--<div class="link-section--back" id="section-back">
+        <div class="link-section--back" id="section-back">
             <div class="project-container">
-              <div class="project-container__desc">
-                <h1>Crumb</h1>
-                <h5><i>Personal project-Desktop</i></h5>
-                <p class="project-desc">Users can search for recipes by ingredient and browse paginated results, adjust serving sizes,
-                   bookmark recipes, and upload their own recipes
+              <div class="project-container__desc project-container__desc--back">
+                <h1>Sample Code</h1>
+                <h5><i>Personal project</i></h5>
+                <p class="project-desc">Playgrounds where I go to have some fun, keep my syntax fresh, and work on basic algorithms
                 </p>
                 <hr />
                 <p class="project-info">
-                  <b>Architecture:</b> Jamstack, MVC <br />
-                  <b>Bundler:</b> Parcel <br />
-                  <b>Polyfill:</b> Babel <br />
+                  <b>Language:</b> C# <br />
+                  <b>Unit testing:</b> Moq, NUnit <br />
                 </p>
-                <p class="project-links link--back">
-                  <a href="https://crumb-app.netlify.app/">...View build</a> 
-                  <a href="https://github.com/cfernando1115/crumb">...View source</a>
-                </p>
-              </div>
-              <div class="img-container"> <img src="src/img/crumb-home-300.svg" class="project-container__image" /></div>
-              <div class="img-container"><img src="src/img/crumb-pizza-300.svg" class="project-container__image" /></div>
-              <div class="img-container"><img src="src/img/crumb-modal-300.svg" class="project-container__image" /></div>
-            </div>
-            <div class="project-container">
-              <div class="project-container__desc">
-                <h1>Sales Table</h1>
-                <h5><i>Personal project-Responsive</i></h5>
-                <p class="project-desc">Users can sort sales data by quarter(s), salesperson name, sales amount, as well as edit data to session storage
-                </p>
-                <hr />
-                <p class="project-info">
-                  <b>Architecture:</b> API Mockup, MVC <br />
-                  <b>Bundler:</b> Parcel <br />
-                  <b>Polyfill:</b> Babel <br />
-                </p>
-                <p class="project-links link--back">
-                  <a href="https://sales-table.netlify.app/">...View build</a> 
-                  <a href="https://github.com/cfernando1115/sales-table">...View source</a>
+                <p class="project-links back">
+                  <a href="https://github.com/cfernando1115/sample-code-csharp-tech">...Tech source</a> 
+                  <a href="https://github.com/cfernando1115/sample-code-csharp">...Testing source</a>
                 </p>
               </div>
-              <div class="img-container"><img src="src/img/salestable-home-300.svg" class="project-container__image" /></div>
-              <div class="img-container"><img src="src/img/salestable-edit-300.svg" class="project-container__image" /></div>
-              <div class="img-container"><img src="src/img/salestable-mobile-300.svg" class="project-container__image" /></div>
+              <div class="img-container"> <img src="src/img/sampleCode-linkedList-300.svg" height="300" width="300" alt="c# sample code" class="project-container__image" /></div>
+              <div class="img-container"><img src="src/img/sampleCode-linkedListTest-300.svg" height="300" width="300" alt="c# sample code" class="project-container__image" /></div>
+              <div class="img-container"><img src="src/img/sampleCode-tech-300.svg" height="300" width="300" alt="c# sample code" class="project-container__image" /></div>
             </div>
-          </div>-->
+          </div>
         </div>
-      </div>
-    </div>
-        <div class="link-section" id="section-frame">Frameworks</div>
       </main>
     </div>
   </body>

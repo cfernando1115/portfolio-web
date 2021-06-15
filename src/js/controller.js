@@ -25,7 +25,7 @@ import 'regenerator-runtime/runtime';
         }
 
         document.querySelector(clicked.getAttribute('href'))
-            .scrollIntoView({ behavior: "smooth" });
+            .scrollIntoView({ behavior: 'smooth' });
     })
 })();
 
