@@ -13,24 +13,24 @@
     <title>Carmen Fernando</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container column-align-center">
+      <div class="intro full-width column-align-center">
+        <nav class="nav">
+          <ul class="nav__links-list">
+            <li><a>About</a></li>
+            <li><a>Resume</a></li>
+            <li><a>Contact</a></li>
+          </ul>
+        </nav>
+        <header class="header">
+          <div class="header__text">
+            <h1><span class="line-deco">Welco</span>me.</h1>
+            <p>Use the links below or keep scrolling to view my projects</p>
+          </div>
+        </header>
       <!--top navigation-->
-      <nav>
-        <ul class="nav__links-list">
-          <li><a>About</a></li>
-          <li><a>Resume</a></li>
-          <li><a>Contact</a></li>
-        </ul>
-      </nav>
-      <header class="header">
-        <div class="header__text">
-          <h1><span class="line-deco">Welco</span>me.</h1>
-          <p>Use the links below or keep scrolling to view my projects</p>
-        </div>
-      </header>
-      <main class="main">
         <div class="links-container">
-          <div class="links-container__link">
+          <div class="links-container__link column-align-center">
             <h3 class="links-container__link--title"><span class="line-deco">HTML,</span> JS, CSS</h3>
             <p class="links-container__desc hidden">
               These projects use minimal if any frameworks, with a focus on functionality
@@ -38,7 +38,7 @@
               <a href="#section-front">...view</a>
             </p>
           </div>
-          <div class="links-container__link">
+          <div class="links-container__link column-align-center">
             <h3 class="links-container__link--title"><span class="line-deco">C#, T</span>esting</h3>
             <p class="links-container__desc hidden">
               Sample C# code and unit tests
@@ -46,7 +46,7 @@
               <a href="#section-back">...view</a>
             </p>
           </div>
-          <div class="links-container__link">
+          <div class="links-container__link column-align-center">
             <h3 class="links-container__link--title"><span class="line-deco">Frame</span>works</h3>
             <p class="links-container__desc hidden">
               Larger ongoing projects using a variety of frameworks including .NET5, MVC, Angular
@@ -55,8 +55,10 @@
             </p>
           </div>
         </div>
+      </div>
         <!--front-end-->
-        <div class="section-container section-container--front">
+      <main class="main">
+        <div class="section-container section-container--front column-align-center">
           <div class="link-section__title full-width front">
             <h2><span class="line-deco">HTML,</span> JS, CSS</h2>
           </div>
@@ -107,11 +109,11 @@
           </div>
         </div>
         <!--back-end-->
-        <div class="section-container section-container--back">
+        <div class="section-container section-container--back column-align-center">
           <div class="link-section__title full-width back">
             <h2><span class="line-deco">C#, Un</span>it Testing</h2>
           </div>
-        <div class="link-section--back" id="section-back">
+          <div class="link-section--back" id="section-back">
             <div class="project-container">
               <div class="project-container__desc project-container__desc--back">
                 <h1>Sample Code</h1>
