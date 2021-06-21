@@ -1,52 +1,42 @@
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 
+import view from './view.js';
+
 (function () {
-    const linkBoxes = document.querySelectorAll('.links-container__link');
-    const linksContainer = document.querySelector('.links-container');
-    const intro = document.querySelector('.intro');
-    const nav = document.querySelector('.nav');
 
     //Links animation
-    linkBoxes.forEach(linkBox => {
-        linkBox.addEventListener('mouseenter', displayLink);
-    });
-
-    function displayLink(e) {
-        const link = e.target.querySelector('p');
-        link.classList.remove('hidden');
-        e.target.removeEventListener('mouseenter', displayLink);
-    }
+    view.addLinkboxesListener();
 
     //Links eventlistener
-    linksContainer.addEventListener('click', (e) => {
-        const clicked = e.target.closest('.links-container__link a');
+    view.addLinksContainerListener();
 
-        if (!clicked) {
+    //Sticky nav
+    view.addStickyNav();
+
+    const projectContainers = document.querySelectorAll('.project-container');
+
+    const revealProject = (entries, observer) => {
+        const [entry] = entries;
+
+        if (!entry.isIntersecting) {
             return;
         }
 
-        document.querySelector(clicked.getAttribute('href'))
-            .scrollIntoView({ behavior: 'smooth' });
-    })
-
-    //Sticky nav
-    const stickyNav = function (entries) {
-        const [entry] = entries;
-
-        entry.isIntersecting
-            ? nav.classList.remove('sticky')
-            : nav.classList.add('sticky');
+        entry.target.classList.remove('project-container--hidden');
+        observer.unobserve(entry.target);
     }
 
-    const navHeight = (nav.getBoundingClientRect().height);
-    const introObserver = new IntersectionObserver(stickyNav, {
+    const projectObserver = new IntersectionObserver(revealProject, {
         root: null,
-        threshold: 0,
-        rootMargin: `-${navHeight}px`
+        threshold: 0.15
     });
 
-    introObserver.observe(intro);
+    projectContainers.forEach(project => {
+        projectObserver.observe(project);
+        project.classList.add('project-container--hidden');
+    })
+
 })();
 
 
