@@ -14,28 +14,8 @@ import view from './view.js';
     //Sticky nav
     view.addStickyNav();
 
-    const projectContainers = document.querySelectorAll('.project-container');
-
-    const revealProject = (entries, observer) => {
-        const [entry] = entries;
-
-        if (!entry.isIntersecting) {
-            return;
-        }
-
-        entry.target.classList.remove('project-container--hidden');
-        observer.unobserve(entry.target);
-    }
-
-    const projectObserver = new IntersectionObserver(revealProject, {
-        root: null,
-        threshold: 0.15
-    });
-
-    projectContainers.forEach(project => {
-        projectObserver.observe(project);
-        project.classList.add('project-container--hidden');
-    })
+    //Scroll animation
+    view.addScrollAnimation();
 
 })();
 
