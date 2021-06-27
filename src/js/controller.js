@@ -5,6 +5,9 @@ import view from './view.js';
 
 (function () {
 
+    //Nav links
+    view.addNavLinksListener();
+
     //Links animation
     view.addLinkboxesListener();
 

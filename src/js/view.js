@@ -1,9 +1,24 @@
 class View {
+    nav = document.querySelector('.nav');
     linkBoxes = document.querySelectorAll('.links-container__link');
     linksContainer = document.querySelector('.links-container');
     intro = document.querySelector('.intro');
     nav = document.querySelector('.nav');
     projectContainers = document.querySelectorAll('.project-container');
+
+    addNavLinksListener() {
+        this.nav.addEventListener('click', (e) => {
+            e.preventDefault();
+            const clicked = e.target.closest('.nav__links-list a');
+    
+            if (!clicked) {
+                return;
+            }
+    
+            document.querySelector(clicked.getAttribute('href'))
+                .scrollIntoView({ behavior: 'smooth' });
+        })
+    }
 
     addLinkboxesListener() {
         this.linkBoxes.forEach(linkBox => {

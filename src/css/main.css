@@ -13,6 +13,7 @@
 }
 
 /*reusable*/
+
 .line-deco {
     text-decoration-line: overline;
     text-decoration-color: var(--bright);
@@ -99,12 +100,16 @@
 
 .nav__links-list li {
     margin: 10px 25px 0 15px;
-    color: black;
     cursor: pointer;
 }
 
 .nav__links-list li:last-child {
     margin-right: 0;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: black;
 }
 
 .header {
@@ -143,13 +148,11 @@
     margin-top: 50px;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .links-container__link {
     margin-top: 30px;
     width: 25%;
-    height: 150px;
 }
 
 .links-container__link--title {
@@ -192,6 +195,10 @@
     background-image: url("/src/img/header-bottom-half-white.svg");
     background-position: top;
     background-repeat: no-repeat;
+}
+
+.no-background--img {
+    background-image: none;
 }
 
 .link-section__title h2 {
@@ -311,8 +318,81 @@
     position: absolute;
 }
 
+.section__nav {
+    padding: 20px 0;
+}
+
+.section__nav-icon {
+    margin-right: 10px;
+    color: var(--bright);
+}
+
+.section__about--intro {
+    color: var(--bright);
+}
+
+.resume-link {
+    text-decoration: none;
+}
+
+.contact-form {
+    margin-bottom: 100px;
+}
+
+.contact-form__group {
+    margin: 15px 0;
+}
+
+.contact-form__label {
+    display: inline-block;
+    width: 100px;
+    margin-right: 20px;
+    color: var(--bright);
+}
+
+.contact-form__input,
+.contact-form__textarea {
+    width: 300px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px 2px var(--grey);
+    outline: var(--bright);
+    background-color: #e4e4e4;
+    padding-left: 4px;
+}
+
+.contact-form__input {
+    height: 30px;
+}
+
+.contact-form__input:focus,
+.contact-form__textarea:focus {
+    background-color: white;
+}
+
+.contact-form__submit {
+    border: none;
+    padding: 3px 15px;
+    font-weight: 600;
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px 2px var(--grey);
+    background-color: var(--bright);
+    cursor: pointer;
+    margin-left: 120px;
+    color: white;
+}
+
+.recaptcha {
+    margin-bottom: 10px;
+    margin-left: 120px;
+}
+
 /*small phones to small tablets (500-750px)*/
 @media only screen and (max-width:750px){
+    
+    .no-hidden--small {
+        opacity: 1;
+    }
 
     .intro {
         background-image: url("/src/img/full-background-sm.svg");
@@ -336,7 +416,7 @@
 
     .links-container__link {
         width: 95%;
-        height: 75px;
+        margin-bottom: 30px;
     }
 
     .header {
@@ -359,6 +439,10 @@
         background-repeat: no-repeat;
     }
 
+    .no-background--img {
+        background-image: none;
+    }    
+
     .project-container {
         flex-direction: column;
         align-items: center;
@@ -376,14 +460,14 @@
     .slider__container,
     .img__container,
     .arrow__container {
-        width: 500px;
+        width: 400px;
     }
 
     .img__container .slide {
-        width:500px;
+        width:400px;
     }
 
-    .hidden {
-        opacity: 1;
+    .section__nav {
+        width: 90%;
     }
 }

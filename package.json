@@ -2,10 +2,10 @@
   "name": "personalweb",
   "version": "1.0.0",
   "description": "personal website",
-  "main": "index.html",
+  "default": "index.html",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html",
+    "build": "parcel build index.html --dist-dir ./dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Carmen Fernando",
