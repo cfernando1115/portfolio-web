@@ -59,6 +59,7 @@
 
 .section-container--neutral {
     background-color: rgb(234, 231, 220, 0.6);
+    background-position: center;
 }
 
 .section-container--grey {
@@ -67,7 +68,7 @@
 
 .intro {
     margin: 0;
-    height: 800px;
+    height: 900px;
     background-color: #f2f0ea;
     background-image: url("/src/img/full-background.svg");
     background-repeat: no-repeat;
@@ -132,7 +133,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-image: url("/src/img/full-background.svg");
+    background-image: url("/src/img/header-top-half.svg");
     background-repeat: no-repeat;
     background-position-x: center;
     background-attachment: fixed;
@@ -170,9 +171,15 @@
     color: var(--bright);
 }
 
+.nonsense {
+    color: var(--grey);
+    width: 80%;
+    padding: 0 15px 3px 3px;
+}
+
 .link-section{
     margin: 0;
-    background-color: #eae7dc9d;
+    width: 65%;
 }
 
 .link-section__title {
@@ -182,6 +189,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url("/src/img/header-bottom-half-white.svg");
+    background-position: top;
+    background-repeat: no-repeat;
 }
 
 .link-section__title h2 {
@@ -190,7 +200,7 @@
 
 .project-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     min-height: 300px;
     transition: transform 1s, opacity 1s;
 }
@@ -202,26 +212,12 @@
 
 .project-container__desc {
     background-position-x: center;
-    /*background-size: cover;*/
     min-height: 300px;
     width: 300px;
 }
 
-.project-container__desc--front {
-    background-image: url("/src/img/crumb-desc-300.svg");
-}
-
-.project-container__desc--back {
-    background-image: url("/src/img/back-desc-300.svg");
-}
-
-.project-container__desc--frame {
-    background-image: url("/src/img/frame-desc-300.svg");
-}
-
 .project-container__desc h1 {
     padding-top: 20px;
-    width: 300px;
 }
 
 .project-container__desc h5 {
@@ -257,19 +253,62 @@
     margin-left: 0;
 }
 
-
-.img-container {
-    overflow: hidden;
+.slider__container {
+    width: 800px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.project-container img {
+.arrow__container {
+    width: 800px;
+    position: absolute;
+    z-index: 199;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.arrow__container .arrow-btn:first-child {
+    padding-left: 20px;
+}
+
+.arrow__container .arrow-btn:last-child {
+    padding-right: 20px;
+}
+
+.arrow__btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.arrow-icon {
+    font-size: 250%;
+    color: var(--rose);
+}
+
+
+.img__container {
+    overflow: hidden;
+    position: relative;
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+}
+
+.slide {
     transition: transform .5s;
 }
 
-.project-container img:hover,
-.project-container img:active {
-    transform: scale(1.5);
-    overflow: hidden;
+
+.slide-1 {
+    position: relative;
+}
+
+.slide-under {
+    position: absolute;
 }
 
 /*small phones to small tablets (500-750px)*/
@@ -287,7 +326,7 @@
     }
 
     .main {
-        background-image: url("/src/img/full-background-sm.svg");
+        background-image: url("/src/img/header-top-half-sm.svg");
     }
 
     .links-container {
@@ -312,17 +351,36 @@
 
     .link-section {
         width: 100%;
-        padding-left: 10%;
+    }
+
+    .link-section__title {
+        background-image: url("/src/img/header-bottom-half-white-sm.svg");
+        background-position: top;
+        background-repeat: no-repeat;
     }
 
     .project-container {
         flex-direction: column;
-        align-items: flex-start;
-        height: 1200px;
+        align-items: center;
+        justify-content: center;
     }
 
     .project-container__desc {
         z-index: 99;
+    }
+
+    .slider-container {
+        flex-direction: column;
+    }
+
+    .slider__container,
+    .img__container,
+    .arrow__container {
+        width: 500px;
+    }
+
+    .img__container .slide {
+        width:500px;
     }
 
     .hidden {

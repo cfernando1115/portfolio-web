@@ -17,6 +17,9 @@ import view from './view.js';
     //Scroll animation
     view.addScrollAnimation();
 
+    //Sliders
+    view.sliderInit();
+
 })();
 
 

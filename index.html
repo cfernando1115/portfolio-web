@@ -6,9 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/src/img/favicon.svg">
+    <link rel="icon" type="image/png" href="/src/img/favicon.png">
+    <script src="node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
 
     <link rel="stylesheet" href="src/css/main.css" />
     <script type="module" src="src/js/controller.js"></script>
+
 
     <title>Carmen Fernando</title>
   </head>
@@ -32,18 +36,21 @@
         <div class="links-container">
           <div class="links-container__link column-align-center">
             <a href="#section-front"><h3 class="links-container__link--title"><span class="line-deco">HTML,</span> JS, CSS</h3></a>
+            <p class="nonsense">All jQuery aside...</p>
             <p class="links-container__desc hidden">
               These projects use minimal if any frameworks, with a focus on functionality
             </p>
           </div>
           <div class="links-container__link column-align-center">
             <a href="#section-back"><h3 class="links-container__link--title"><span class="line-deco">C#, T</span>esting</h3></a>
+            <p class="nonsense">var a,b,c...it's easy as...</p>
             <p class="links-container__desc hidden">
               Sample C# code and unit tests
             </p>
           </div>
           <div class="links-container__link column-align-center">
             <a href="#section-frame"><h3 class="links-container__link--title"><span class="line-deco">Frame</span>works</h3></a>
+            <p class="nonsense">They really tie the room together...</p>
             <p class="links-container__desc hidden">
               Larger ongoing projects using a variety of frameworks including .NET5, MVC, Angular
             </p>
@@ -56,7 +63,7 @@
           <div class="link-section__title full-width neutral--color">
             <h2><span class="line-deco">HTML,</span> JS, CSS</h2>
           </div>
-          <div class="link-section--front">
+          <div class="link-section">
             <div class="project-container">
               <div class="project-container__desc project-container__desc--front">
                 <h1>Crumb</h1>
@@ -75,9 +82,17 @@
                   <a href="https://github.com/cfernando1115/crumb">...View source</a>
                 </p>
               </div>
-              <div class="img-container"> <img src="src/img/crumb-home-300.svg" height="300" width="300" alt="crumb app home" class="project-container__image" /></div>
-              <div class="img-container"><img src="src/img/crumb-pizza-300.svg" height="300" width="300" alt="crumb app search" class="project-container__image" /></div>
-              <div class="img-container"><img src="src/img/crumb-modal-300.svg" height="300" width="300" alt="crumb app modal" class="project-container__image" /></div>
+              <div class="slider__container slider__container--crumb">
+                <div class="arrow__container">
+                  <button class="arrow__btn arrow__btn--left"><i class="arrow-icon fas fa-arrow-circle-left"></i></button>
+                  <button class="arrow__btn arrow__btn--right"><i class="arrow-icon fas fa-arrow-circle-right"></i></button>
+                </div>
+                <div class="img__container">
+                  <img class="slide slide-1" src="src/img/crumb-pizza-sliderpng.svg" alt="Crumb app screenshot" />
+                  <img class="slide slide-under hidden" src="src/img/crumb-pasta-sliderpng.svg" alt="Crumb app screenshot" />
+                  <img class="slide slide-under hidden" src="src/img/crumb-modal-sliderpng.svg" alt="Crumb app screenshot" />
+                </div>
+              </div>
             </div>
             <div class="project-container">
               <div class="project-container__desc project-container__desc--front">
@@ -96,9 +111,17 @@
                   <a href="https://github.com/cfernando1115/sales-table">...View source</a>
                 </p>
               </div>
-              <div class="img-container"><img src="src/img/salestable-home-300.svg" height="300" width="300" alt="sales table home" class="project-container__image" /></div>
-              <div class="img-container"><img src="src/img/salestable-edit-300.svg" height="300" width="300" alt="sales table edit" class="project-container__image" /></div>
-              <div class="img-container"><img src="src/img/salestable-mobile-300.svg" height="300" width="300" alt="sales table mobile" class="project-container__image" /></div>
+              <div class="slider__container slider__container--sales">
+                <div class="arrow__container">
+                  <button class="arrow__btn arrow__btn--left"><i class="arrow-icon fas fa-arrow-circle-left"></i></button>
+                  <button class="arrow__btn arrow__btn--right"><i class="arrow-icon fas fa-arrow-circle-right"></i></button>
+                </div>
+                <div class="img__container">
+                  <img class="slide slide-1" src="src/img/sales-home-sliderpng.svg" alt="Sales Table app screenshot" />
+                  <img class="slide slide-under hidden" src="src/img/sales-edit-sliderpng.svg" alt="Sales Table app screenshot" />
+                  <img class="slide slide-under hidden" src="src/img/sales-mobile-sliderpng.svg" alt="Sales Table app screenshot" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -107,7 +130,7 @@
           <div class="link-section__title full-width grey--color">
             <h2><span class="line-deco">C#, Un</span>it Testing</h2>
           </div>
-          <div class="link-section--back">
+          <div class="link-section">
             <div class="project-container">
               <div class="project-container__desc project-container__desc--back">
                 <h1>Sample Code</h1>
@@ -124,18 +147,26 @@
                   <a href="https://github.com/cfernando1115/sample-code-csharp">...Testing source</a>
                 </p>
               </div>
-              <div class="img-container"> <img src="src/img/sampleCode-linkedList-300.svg" height="300" width="300" alt="c# sample code" class="project-container__image" /></div>
-              <div class="img-container"><img src="src/img/sampleCode-linkedListTest-300.svg" height="300" width="300" alt="c# sample code" class="project-container__image" /></div>
-              <div class="img-container"><img src="src/img/sampleCode-tech-300.svg" height="300" width="300" alt="c# sample code" class="project-container__image" /></div>
+              <div class="slider__container slider__container--csharp">
+                <div class="arrow__container">
+                  <button class="arrow__btn arrow__btn--left"><i class="arrow-icon fas fa-arrow-circle-left"></i></button>
+                  <button class="arrow__btn arrow__btn--right"><i class="arrow-icon fas fa-arrow-circle-right"></i></button>
+                </div>
+                <div class="img__container">
+                  <img class="slide slide-1" src="src/img/csharp-program-sliderpng.svg" alt="CSharp code screeenshot" />
+                  <img class="slide slide-under hidden" src="src/img/csharp-linked-list-test-sliderpng.svg" alt="CSharp code screeenshot" />
+                  <img class="slide slide-under hidden" src="src/img/csharp-linked-list-sliderpng.svg" alt="CSharp code screeenshot" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <!--frameworks-->
         <div class="section-container section-container--neutral column-align-center"  id="section-frame">
-          <div class="link-section__title full-width front--color">
+          <div class="link-section__title full-width neutral--color">
             <h2><span class="line-deco">Frame</span>works</h2>
           </div>
-          <div class="link-section--front">
+          <div class="link-section">
             <div class="project-container">
               <div class="project-container__desc project-container__desc--front">
                 <h1>BookSmart</h1>
@@ -148,17 +179,24 @@
                   <b>Architecture:</b> .NET 5 MVC <br />
                 </p>
                 <p class="project-links neutral--color">
-                  <!--<a href="https://crumb-app.netlify.app/">...View build</a>-->
                   <a href="https://github.com/cfernando1115/booksmart">...View source</a>
                 </p>
               </div>
-              <div class="img-container"> <img src="src/img/booksmart-home-300.svg" height="300" width="300" alt="crumb app home" class="project-container__image" /></div>
-              <div class="img-container"><img src="src/img/booksmart-calendar-300.svg" height="300" width="300" alt="crumb app search" class="project-container__image" /></div>
-              <div class="img-container"><img src="src/img/booksmart-landing-300.svg" height="300" width="300" alt="crumb app modal" class="project-container__image" /></div>
+              <div class="slider__container slider__container--booksmart">
+                <div class="arrow__container">
+                  <button class="arrow__btn arrow__btn--left"><i class="arrow-icon fas fa-arrow-circle-left"></i></button>
+                  <button class="arrow__btn arrow__btn--right"><i class="arrow-icon fas fa-arrow-circle-right"></i></button>
+                </div>
+                <div class="img__container">
+                  <img class="slide slide-1" src="src/img/booksmart-homepng.svg" alt="BookSmart app screenshot" />
+                  <img class="slide slide-under hidden" src="src/img/booksmart-landingpng.svg" alt="BookSmart app screenshot" />
+                  <img class="slide slide-under hidden" src="src/img/booksmart-calendarpng.svg" alt="BookSmart app screenshot" />
+                </div>
+              </div>
             </div>
             <div class="project-container">
               <div class="project-container__desc project-container__desc--front">
-                <h1>Trivia App</h1>
+                <h1>Trivia</h1>
                 <h5><i>Ann Arbor Eagles-Hybrid</i></h5>
                 <p class="project-desc">In response to the pandemic, the Ann Arbor Eagles needed a way to run their live trivia without requiring guests to
                   leave their tables. Players can register their team and submit answers to questions from their tables. The host can remotely trigger questions,
@@ -175,9 +213,18 @@
                   <a href="https://github.com/cfernando1115/sales-table">...View source</a>
                 </p>
               </div>
-              <div class="img-container"><img src="src/img/salestable-home-300.svg" height="300" width="300" alt="sales table home" class="project-container__image" /></div>
-              <div class="img-container"><img src="src/img/salestable-edit-300.svg" height="300" width="300" alt="sales table edit" class="project-container__image" /></div>
-              <div class="img-container"><img src="src/img/salestable-mobile-300.svg" height="300" width="300" alt="sales table mobile" class="project-container__image" /></div>
+              <div class="slider__container slider__container--trivia">
+                <div class="arrow__container">
+                  <button class="arrow__btn arrow__btn--left"><i class="arrow-icon fas fa-arrow-circle-left"></i></button>
+                  <button class="arrow__btn arrow__btn--right"><i class="arrow-icon fas fa-arrow-circle-right"></i></button>
+                </div>
+                <div class="img__container">
+                  <img class="slide slide-1" src="src/img/trivia-questionspng.svg" alt="Eagles Trivia screenshot" />
+                  <img class="slide slide-under hidden" src="src/img/trivia-gameadminpng.svg" alt="Eagles Trivia screenshot" />
+                  <img class="slide slide-under hidden" src="src/img/trivia-registrationpng.svg" alt="Eagles Trivia screenshot" />
+                  <img class="slide slide-under hidden" src="src/img/trivia-mobileplaypng.svg" alt="Eagles Trivia screenshot" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
