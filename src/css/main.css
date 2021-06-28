@@ -103,10 +103,6 @@
     cursor: pointer;
 }
 
-.nav__links-list li:last-child {
-    margin-right: 0;
-}
-
 .nav__link {
     text-decoration: none;
     color: black;
@@ -182,7 +178,7 @@
 
 .link-section{
     margin: 0;
-    width: 65%;
+    width: 75%;
 }
 
 .link-section__title {
@@ -219,7 +215,7 @@
 
 .project-container__desc {
     background-position-x: center;
-    min-height: 300px;
+    /*min-height: 300px;*/
     width: 300px;
 }
 
@@ -262,7 +258,7 @@
 
 .slider__container {
     width: 800px;
-    height: 400px;
+    /*height: 400px;*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -278,11 +274,11 @@
 }
 
 .arrow__container .arrow-btn:first-child {
-    padding-left: 20px;
+    padding-left: 50px;
 }
 
 .arrow__container .arrow-btn:last-child {
-    padding-right: 20px;
+    padding-right: 50px;
 }
 
 .arrow__btn {
@@ -396,12 +392,13 @@
 
     .intro {
         background-image: url("/src/img/full-background-sm.svg");
+        width: 100%;
     }
 
     .nav__links-list {
         display: flex;
-        width: 90%;
-        justify-content: flex-end;
+        width: 100%;
+        justify-content: center;
         list-style: none;
     }
 
@@ -437,6 +434,8 @@
         background-image: url("/src/img/header-bottom-half-white-sm.svg");
         background-position: top;
         background-repeat: no-repeat;
+        justify-content: flex-start;
+        padding-left: 20%;
     }
 
     .no-background--img {
@@ -453,21 +452,42 @@
         z-index: 99;
     }
 
-    .slider-container {
-        flex-direction: column;
-    }
-
     .slider__container,
     .img__container,
     .arrow__container {
-        width: 400px;
+        width: 500px;
     }
 
     .img__container .slide {
-        width:400px;
+        width:450px;
     }
 
     .section__nav {
         width: 90%;
+    }
+
+    .img__container {
+        height: 250px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .slider__container {
+        flex-direction: column;
+        height: 500px;
+        align-items: flex-start;
+    }
+
+    .arrow__container {
+        position: relative;
+        justify-content: center;
+    }
+
+    .arrow-icon {
+        margin: 10px;
+    }
+
+    .recaptcha {
+        margin-left: 0;
     }
 }
